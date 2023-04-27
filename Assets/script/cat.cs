@@ -7,12 +7,17 @@ public class cat : MonoBehaviour
     float full = 5.0f;
     float energy = 0.0f;
     bool isFull = false;
+    public int type;
     // Start is called before the first frame update
     void Start()
     {
         float x = Random.Range(-8.5f, 8.5f);
         float y = 30f;
         transform.position = new Vector3(x, y, 0);
+        if(type == 1)
+        {
+            full = 10.0f;
+        }
     }
 
     // Update is called once per frame
@@ -22,9 +27,15 @@ public class cat : MonoBehaviour
 
         if (energy < full)
         {
-            transform.position += new Vector3(0, -0.05f, 0);
+            if(type == 0)
+            {
+                transform.position += new Vector3(0, -0.05f, 0);
+            }else if (type == 1)
+            {
+                transform.position += new Vector3(0, -0.03f, 0);
+            }
 
-            if(transform.position.y < -16f)
+            if (transform.position.y < -16f)
             {
                 GameManager.I.gameOver();
             }

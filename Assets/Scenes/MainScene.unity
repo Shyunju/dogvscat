@@ -602,7 +602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 500}
+  m_AnchoredPosition: {x: 250, y: 505.22}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972865374
@@ -929,6 +929,7 @@ MonoBehaviour:
   dog: {fileID: 2130529951}
   food: {fileID: 7459203947319557586, guid: 6bd37d390a371d344bd9b8a2cb9ce7fd, type: 3}
   normalCat: {fileID: 3007145107162592181, guid: a09b44c4f704e4d48825a81ff2e4b603, type: 3}
+  fatCat: {fileID: 1065372918810592827, guid: 704851035e9a78d47ba11a9b1eaf1d64, type: 3}
   retryBtn: {fileID: 1807533131}
   levelText: {fileID: 1199919523}
   levelFront: {fileID: 620825768}
