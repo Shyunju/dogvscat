@@ -25,7 +25,7 @@ public class cat : MonoBehaviour
 
             if(transform.position.y < -16f)
             {
-
+                GameManager.I.gameOver();
             }
         }
         else
