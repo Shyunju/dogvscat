@@ -7,6 +7,12 @@ public class GameManager : MonoBehaviour
     public GameObject dog;
     public GameObject food;
     public GameObject normalCat;
+    public static GameManager I;
+    public GameObject retryBtn;
+    private void Awake()
+    {
+        I = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +35,10 @@ public class GameManager : MonoBehaviour
     void makeCat()
     {
         Instantiate(normalCat);
+    }
+    public void gameOver()
+    {
+        retryBtn.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
