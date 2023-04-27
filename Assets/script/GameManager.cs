@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class GameManager : MonoBehaviour
     public GameObject normalCat;
     public static GameManager I;
     public GameObject retryBtn;
+
+    int level = 0;
+    int cat=0;
+
+    public Text levelText;
+    public GameObject levelFront;
     private void Awake()
     {
         I = this;
@@ -40,5 +47,14 @@ public class GameManager : MonoBehaviour
     {
         retryBtn.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    public void addCat()
+    {
+        cat += 1;
+        level = cat / 5;
+
+        levelText.text = level.ToString();
+        levelFront.transform.localScale = new Vector3((cat - level * 5) / 5f, 1f, 1f);
     }
 }

@@ -6,6 +6,7 @@ public class cat : MonoBehaviour
 {
     float full = 5.0f;
     float energy = 0.0f;
+    bool isFull = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,8 +55,14 @@ public class cat : MonoBehaviour
             }
             else
             {
-                gameObject.transform.Find("hungry").gameObject.SetActive(false);
-                gameObject.transform.Find("full").gameObject.SetActive(true);
+                if( isFull == false) // 이프문이 없다면 배불러진 상태에서 먹이와 충돌해도 점수가 상승함
+                {
+                    GameManager.I.addCat();
+                    gameObject.transform.Find("hungry").gameObject.SetActive(false);
+                    gameObject.transform.Find("full").gameObject.SetActive(true);
+                    isFull = true;
+                }
+                
             }
             
         }
