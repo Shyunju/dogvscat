@@ -930,6 +930,7 @@ MonoBehaviour:
   food: {fileID: 7459203947319557586, guid: 6bd37d390a371d344bd9b8a2cb9ce7fd, type: 3}
   normalCat: {fileID: 3007145107162592181, guid: a09b44c4f704e4d48825a81ff2e4b603, type: 3}
   fatCat: {fileID: 1065372918810592827, guid: 704851035e9a78d47ba11a9b1eaf1d64, type: 3}
+  pirateCat: {fileID: 6030101775042706709, guid: e213992ca7527c3438abb43b8cd9d078, type: 3}
   retryBtn: {fileID: 1807533131}
   levelText: {fileID: 1199919523}
   levelFront: {fileID: 620825768}

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject food;
     public GameObject normalCat;
     public GameObject fatCat;
+    public GameObject pirateCat;
     public static GameManager I;
     public GameObject retryBtn;
 
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("makeFood", 0.0f, 0.2f);
+        InvokeRepeating("makeFood", 0.0f, 0.05f);
         InvokeRepeating("makeCat", 0.0f, 1f);
         Time.timeScale = 1f;
     }
@@ -53,11 +54,19 @@ public class GameManager : MonoBehaviour
         {
             float p = Random.Range(0, 10);
             if(p<5) Instantiate(normalCat);
-        }else if(level >= 3)
+        }else if(level == 3)
         {
             float p = Random.Range(0, 10);
             if (p < 6) Instantiate(normalCat);
             Instantiate(fatCat);
+        }
+        else if (level >= 4)
+        {
+            float p = Random.Range(0, 10);
+            if (p < 5) Instantiate(normalCat);
+
+            Instantiate(fatCat);
+            Instantiate(pirateCat);
         }
     }
     public void gameOver()
