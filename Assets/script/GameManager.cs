@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         InvokeRepeating("makeFood", 0.0f, 0.2f);
         InvokeRepeating("makeCat", 0.0f, 1f);
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
